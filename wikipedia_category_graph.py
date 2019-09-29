@@ -33,7 +33,7 @@ class WikipediaCategoryGraph:
             ratings_pair_count[rating_pair] = ratings_pair_count.get(rating_pair, 0) + 1
         print("Ratings Distribution:")
         for rating_pair in sorted(ratings_pair_count.keys()):
-            print("\tArc %s: %s" % (rating_pair, ratings_pair_count[rating_pair]))
+            print("\tArcs %s: %s" % (rating_pair, ratings_pair_count[rating_pair]))
 
     def extract_wikipedia_rating(self, article_title):
         """Determines the rating of the wikipedia article.
