@@ -35,15 +35,16 @@ class WikipediaCategoryGraph:
         for rating_pair in sorted(ratings_pair_count.keys()):
             print("\tArcs %s: %s" % (rating_pair, ratings_pair_count[rating_pair]))
 
-    def graph_to_file(self):
+    def graph_to_file(self, filename):
         for number, node in enumerate(self.graph.nodes):
             self.graph.nodes[node]["number"] = number
-        print("Nodes")
+        file = open(filename, "w")
+        file.write("Nodes\n")
         for node in self.graph.nodes:
-            print(self.graph.nodes[node]["number"], self.graph.nodes[node]["rating"])
-        print("Edges")
+            file.write(str(self.graph.nodes[node]["number"]) + " " + str(self.graph.nodes[node]["rating"]) + "\n")
+        file.write("Edges\n")
         for edge in self.graph.edges:
-            print(self.graph.nodes[edge[0]]["number"], self.graph.nodes[edge[1]]["number"])
+            file.write(str(self.graph.nodes[edge[0]]["number"]) + " " + str(self.graph.nodes[edge[1]]["number"]) + "\n")
 
     def extract_wikipedia_rating(self, article_title):
         """Determines the rating of the wikipedia article.
