@@ -24,7 +24,7 @@ from wikipedia_category_graph import WikipediaCategoryGraph
 # wikipedia_cat_graph_class_novels_by_award.graph_to_file("Novels_by_award-depth3-full.txt")
 
 # wikipedia_cat_graph_class_enlightenment_philosophers.construct_graph(depth=3)
-# wikipedia_cat_graph_class_enlightenment_philosophers.graph_to_file("Englightenment_philosophers-depth3-full.txt")
+# wikipedia_cat_graph_class_enlightenment_philosophers.graph_to_file("Enlightenment_philosophers-depth3-full.txt")
 
 # wikipedia_cat_graph_class_20th_century_physicists.construct_graph(depth=1)
 # wikipedia_cat_graph_class_20th_century_physicists.graph_to_file("20th-century_physicists-depth1-full.txt")
