@@ -81,7 +81,7 @@ class WikipediaCategoryGraph:
         category_page = self.wikipedia_api.page("Category:%s" % self.category_name)
         self._construct_graph_nodes_helper(category_page.categorymembers, depth_remaining=depth)
 
-    def _construct_graph_nodes_helper(self, category_members, depth_remaining=1):
+    def _construct_graph_nodes_helper(self, category_members, depth_remaining):
         for c in category_members.values():
             if c.ns == wikipediaapi.Namespace.MAIN:
                 # add node
