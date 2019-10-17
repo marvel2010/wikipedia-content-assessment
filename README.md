@@ -19,9 +19,11 @@ We use the python package NetworkX to represent these graphs.
 ### Example
 
 ```python
+from wikipedia_category_graph import WikipediaCategoryGraph
 wikipedia_cat_graph_class_egt = WikipediaCategoryGraph("Extremal graph theory")
 
 wikipedia_cat_graph_class_egt.construct_graph(depth=1)
 wikipedia_cat_graph_class_egt.print_node_information()
 wikipedia_cat_graph_class_egt.print_edge_information()
+wikipedia_cat_graph_class_egt.graph_to_file("Extremal_graph_theory-depth1-full.txt")
 ```
