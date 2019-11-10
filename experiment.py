@@ -7,6 +7,16 @@ from wikipedia_category_graph import WikipediaCategoryGraph
 # wikipedia_cat_graph_class_novels_by_award = WikipediaCategoryGraph("Novels by award")
 # wikipedia_cat_graph_class_enlightenment_philosophers = WikipediaCategoryGraph("Enlightenment philosophers")
 # wikipedia_cat_graph_class_20th_century_physicists = WikipediaCategoryGraph("20th-century physicists")
+wikipedia_cat_graph_class_edible_plants = WikipediaCategoryGraph("Edible plants")
+
+# Edible plants [Depth 2]
+# Women science fiction and fantasy writers [Depth 3]
+# Federal government of the United States [Depth 2]
+# History of Spain [Depth 2]
+# Board games [Depth 2]
+# Lakes of the United States by state [Depth 1]
+# Charities [Depth 2]
+# Civil Engineering [Depth 1]
 
 # wikipedia_cat_graph_class_egt.construct_graph(depth=1)
 # wikipedia_cat_graph_class_egt.graph_to_file("Extremal_graph_theory-depth1-full.txt")
@@ -28,3 +38,8 @@ from wikipedia_category_graph import WikipediaCategoryGraph
 
 # wikipedia_cat_graph_class_20th_century_physicists.construct_graph(depth=1)
 # wikipedia_cat_graph_class_20th_century_physicists.graph_to_file("20th-century_physicists-depth1-full.txt")
+
+wikipedia_cat_graph_class_edible_plants.construct_graph(depth=2)
+wikipedia_cat_graph_class_edible_plants.print_node_information()
+wikipedia_cat_graph_class_edible_plants.print_edge_information()
+wikipedia_cat_graph_class_edible_plants.graph_to_file("edible_plants-depth2-full.txt")
