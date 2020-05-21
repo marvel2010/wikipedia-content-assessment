@@ -12,6 +12,7 @@ class WikipediaCategoryGraph:
     def construct_graph(self, depth):
         self._construct_graph_nodes(depth)
         self._construct_graph_edges()
+        # self._relabel_titles_to_utf_8()
 
     def print_node_information(self):
         ratings_count = {}
@@ -100,3 +101,10 @@ class WikipediaCategoryGraph:
             for linked_article in article_links:
                 if linked_article in nodes_set:
                     self.graph.add_edge(article, linked_article)
+
+    def _relabel_titles_to_utf_8(self):
+        titles_to_utf_8 = {
+            node: node.encode("utf-8")
+            for node in self.graph.nodes
+        }
+        nx.relabel.relabel_nodes(self.graph, titles_to_utf_8, copy=False)
