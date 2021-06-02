@@ -4,5 +4,5 @@ decorator==4.4.0
 idna==2.8
 networkx==2.3
 requests==2.22.0
-urllib3==1.25.8
+urllib3==1.26.5
 Wikipedia-API==0.5.2
